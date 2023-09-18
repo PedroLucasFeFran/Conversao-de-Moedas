@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Conversão de Moedas</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <h1>Conversão de Moedas</h1>
+            <p>Converta Moedas de Forma Rápida e Prática</p>
+        </div>
+    </header>
+
+        <section>
+                <div class="formulario">   
+                    <div class="esquerda">
+                        <div class="select-esquerda">
+                            <h2>Converter De:</h2>
+                            <select id="selectinicial" class="valor-inicial">
+                                <option id="disableinicial" style="color: #a9a6a6;" selected disabled>Escolha Uma Moeda</option>
+                                <option id="real-inicial" value="BRL">Real Brasileiro R$ (BRL)</option>
+                                <option id="dolar-inicial" value="USD">Dólar Estadunidense $ (USD)</option>
+                                <option id="euro-inicial" value="EUR">Euro € (EUR)</option>
+                                <option id="iene-inicial" value="JPY">Iene ¥ (JPY)</option>
+                            </select><!--valor-inicial-->
+                        </div>
+
+                        <div class="entrada">
+                            <h2 style="color: rgb(185, 144, 91); font-size: 25px;">Valor Inicial</h2>
+                            <input id="entrada" type="text" placeholder="Valor"><br>
+                            <input onclick="conversao()" id="botao" type="button" value="Converter">
+                            <div id="nota" class="nota">
+                                <p>Nota: O uso dos centavos é determinado apenas com um ponto, por exemplo: 125,15 seria escrito dessa maneira: 125.25. Caso não haja centavos, apenas escreva o número inteiro :)</p>
+                            </div> 
+                            <p id="camponulo"></p>  
+                        </div>
+                    </div>
+
+                    <img src="./img/seta.png">
+                    
+                     
+                    <div class="direita">
+                        <div class="select-direita">
+                            <h2>Para:</h2>
+                            <select id="selectfinal" class="valor-final">
+                                <option id="disablefinal" style="color: #a9a6a6;" disabled selected >Escolha Uma Moeda</option>
+                                <option id="real-final" value="BRL">Real Brasileiro R$ (BRL)</option>
+                                <option id="dolar-final" value="USD">Dólar Estadunidense $ (USD)</option>
+                                <option id="euro-final" value="EUR">Euro € (EUR)</option>
+                                <option id="iene-final" value="JPY">Iene ¥ (JPY)</option>
+                            </select><!--valor-final-->
+                            <div class="entrada-mobile">
+                                <div id="nota-mobile" class="nota-mobile">
+                                    <p>Nota: O uso dos centavos é determinado apenas com um ponto, por exemplo: 125,15 seria escrito dessa maneira: 125.25. Caso não haja centavos, apenas escreva o número inteiro :)</p>
+                                </div> 
+                                <input id="entrada-mobile" type="text" placeholder="Valor"><br>
+                                <input onclick="conversao()" id="botao-mobile" type="button" value="Converter">
+                                <p id="camponulo-mobile"></p>  
+                            </div>
+                        </div>
+
+                        <div class="resultado">
+                            <h2 style="color: rgb(185, 144, 91); font-size: 25px; margin-bottom: 20px;">Valor Convertido</h2>
+                            <div class="h2-left" id="textoativacao">
+                                <h2>Moedas: <span id="name"></span></h2>
+                                <h2>Códigos: <span id="code"></span></h2>
+                                <h2>Valor: <span style= "color: rgb(6, 94, 6); " id="bid"></span></h2> 
+                            </div>
+                        </div>
+                    </div>
+                <div style="clear: both;"></div>
+                </div><!--formulario-->    
+    </section>
+
+    <footer>
+        <div class="cabecalho">
+            <p>Pedro Lucas Ferreira Francisco</p>
+            <p>Águas Lindas de Goiás</p>
+            <div style="clear: both;"></div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
