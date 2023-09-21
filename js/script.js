@@ -96,7 +96,7 @@ function conversao(){
         else if(selectMestre == "BRLEUR"){
           nomeMoedas.innerHTML = realEuro.name;
           codigoMoedas.innerHTML = realEuro.code + "/" + realEuro.codein
-          valorMoedas.innerHTML = realFormatado.format(resultadoEntrada) + " = " +  euroFormatado.format(realEuro.bid * resultadoEntrada)
+          valorMoedas.innerHTML = realFormatado.format(resultadoEntrada) + " = "  + euroFormatado.format(realEuro.bid * resultadoEntrada)
           erro.style.display = "none";
           erroMobile.style.display = "none";
         }//Real para Euro
@@ -189,3 +189,11 @@ function conversao(){
   }
 }
 
+var input = document.getElementById("entrada")
+
+input.addEventListener("keyup", function(enter){
+  if (enter.keyCode === 13){
+      enter.preventDefault();
+      conversao()
+  }
+})

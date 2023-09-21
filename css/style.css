@@ -6,12 +6,10 @@
 }
 
 html,body{
+    min-width: 200px;
     height: 100%;
-    min-width: 300px;
-}
-
-section{
-    min-height: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 header .cabecalho{
@@ -32,10 +30,9 @@ header p{
     color: #d6b813;
 }
 
-
-form{
-    width: 90%;
-    margin: auto auto;
+section{
+    min-height: 80vh;
+    flex: 1 1 0;
 }
 
 section select{
@@ -52,8 +49,7 @@ section select{
 section .formulario{
     width: 90%;
     text-align: center;
-    margin: auto auto;
-    margin-top: 30px;
+    margin: 30px auto auto auto;
 }
 
 section .formulario img{
@@ -110,11 +106,12 @@ section .resultado  h2:nth-of-type(2){
 
 section .resultado  h2:nth-of-type(3){
     margin-top: 20px;
-    color: goldenrod;
-    
+    color: rgb(108, 172, 94) ;
+    margin-bottom: 10px;
 }
 
 section .resultado span{
+    padding: 6px;
     font-weight: normal;
     font-size: 20px;
 }
@@ -127,24 +124,15 @@ section .resultado #bid{
 
 section .h2-left{
     display: none;
-    text-align: left;
 }
 
-
-#id{
-    color: goldenrod;
-    
-}
-
-#camponulo{
+section #camponulo, #camponulo-mobile{
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
     color: rgb(176, 22, 22);
     font-weight: bold;
 }
-
-
 
 section input[type=number]::-webkit-inner-spin-button{ 
     -webkit-appearance: none;
@@ -172,29 +160,32 @@ section input[type=button]{
     border-radius: 5px;
 }
 
-.nota{
-    margin-top: 20px;
-    text-align: justify;
-}
+
 
 .nota p{
+    margin-top: 20px;
+    text-align: center;
     color: #a09b9b;
     font-size: 17px;
 }
 
 .nota-mobile p{
+    text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
     color: #a09b9b;
     font-size: 17px;
 }
 
-footer .cabecalho{
+footer{
     width: 100%;
-    padding: 30px;
-    background-image:linear-gradient(#2d4b4b, #2f6969);
 }
 
+
+footer .cabecalho-wrapper{
+    background-image:linear-gradient(#2d4b4b, #2f6969);
+    padding: 30px;
+}
 
 footer p{
     font-size: 20px;
@@ -210,6 +201,10 @@ footer p:nth-of-type(2){
 }
 
 @media screen and (max-width: 768px){
+    section{
+        min-height: 90vh;
+    }
+
     section .formulario .esquerda{
         width: 100%;
     }
@@ -231,6 +226,19 @@ footer p:nth-of-type(2){
         display: block;
     }
 
+    section .entrada-mobile input[type=text]{
+        width: 50%;
+    }
+
+    #botao-mobile{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    section .resultado  h2:nth-of-type(3){
+        text-align: center;
+    }
+
     section .resultado > h2{
         display: none;
     }
@@ -250,10 +258,9 @@ footer p:nth-of-type(2){
     section .resultado #bid{
         font-size: 25px;
     }
-
-    #botao-mobile{
-        width: 250px;
-        margin-bottom: 20px;
+    
+    section .resultado .h2-left span{
+        text-align: center;
     }
 
     footer p:nth-of-type(1){
@@ -284,6 +291,10 @@ footer p:nth-of-type(2){
 }
 
 @media screen and (max-width: 430px){
+    section{
+        min-height: 100vh;
+    }
+
     header h1{
         padding-top: 20px;
         font-size: 30px;
